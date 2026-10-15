@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Both Sides: write it, tag it, read the other side</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,600&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="bar">
+    <h1>Both Sides</h1>
+    <p class="tag">Write an editorial. Tag your stance. Read the other side.</p>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="side">
+    <section class="reward" aria-labelledby="rw">
+      <h2 id="rw">Win a special gift</h2>
+      <p>Get 1,000 likes on one of your editorials and you receive a special gift.</p>
+    </section>
+    <input type="text" id="search" placeholder="Search topics, for example exams" aria-label="Search topics" style="margin-bottom:10px">
+    <div class="topics" id="topics" role="group" aria-label="Topics"></div>
+  </aside>
+
+  <main class="main">
+    <h2 class="q" id="q"></h2>
+    <div class="seg" id="seg" role="group" aria-label="Show editorials">
+      <button data-f="yes" aria-pressed="false">Yes only</button>
+      <button data-f="no" aria-pressed="false">No only</button>
+      <button data-f="all" aria-pressed="true">Both</button>
+    </div>
+    <p class="count" id="count"></p>
+    <div id="list"></div>
+
+    <section class="write" aria-labelledby="wh">
+      <h2 id="wh">Write your editorial</h2>
+      <label>Your stance on this topic</label>
+      <div class="stance" id="stance">
+        <button data-s="yes" aria-pressed="false">Yes</button>
+        <button data-s="no" aria-pressed="false">No</button>
+      </div>
+      <label for="title">Headline</label>
+      <input type="text" id="title" maxlength="90" placeholder="Make your point in one line">
+      <label for="body">Editorial</label>
+      <textarea id="body" placeholder="Open with your stance, back it with two or three reasons, and answer the strongest argument against you."></textarea>
+      <div class="meta"><span id="wc">0 words</span><span>40 words minimum</span></div>
+      <label for="name">Your name (optional)</label>
+      <input type="text" id="name" maxlength="30" placeholder="Anonymous">
+      <p class="err" id="err" role="alert"></p>
+      <button class="post" id="post">Publish editorial</button>
+    </section>
+  </main>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
